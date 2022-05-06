@@ -5,8 +5,7 @@ const TopButtons = () => {
     return (
         <div className="TopButtons">
             <TopButton index="" title="FAQ" />
-            <TopButton index="" title="Features" />
-            <TopButton index="button" title="About Us" />
+            <TopButton index="button" title="Features" />
             <i className="fa-solid fa-bars TopIcon" />
         </div>
     );

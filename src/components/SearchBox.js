@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useSpeechRecognition } from "react-speech-kit";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 
@@ -6,6 +7,12 @@ const SearchBox = () => {
     const [input, setInput] = useState("");
     const [layout, setLayout] = useState("default");
     const keyboard = useRef();
+
+    const { listen, listening, stop } = useSpeechRecognition({
+        onResult: (result) => {
+            setInput(result);
+        }
+    });
 
     const [show, setShow] = useState(false);
 
@@ -32,12 +39,23 @@ const SearchBox = () => {
         keyboard.current.setInput(input);
     };
 
+    const handleMicrophone = () => {
+        if (!listening) {
+            listen();
+            console.log("Listening");
+        }
+        else {
+            console.log("Stop listening");
+            stop();
+        }
+    };
+
     const handleKeyboard = () => {
         console.log(show);
         if (show) document.querySelector(".simple-keyboard").classList.remove("show");
         else document.querySelector(".simple-keyboard").classList.add("show");
         setShow(!show);
-    }
+    };
 
     return (
         <div className="SearchBox">
@@ -50,7 +68,7 @@ const SearchBox = () => {
                 value={input}
                 onChange={onChangeInput}
             />
-            <i className="fa-duotone fa-microphone SearchIcon SearchIcon-MP" />
+            <i onClick={handleMicrophone} className="fa-duotone fa-microphone SearchIcon SearchIcon-MP" />
             <i onClick={handleKeyboard} className="fa-duotone fa-keyboard SearchIcon SearchIcon-KB" />
             <Keyboard
                 keyboardRef={r => (keyboard.current = r)}
