@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="Footer">
             <LanguageSwitch />
-            <ModeSwitch />
+            <ModeSwitch mode="Light"/>
         </footer>
     );
 };
