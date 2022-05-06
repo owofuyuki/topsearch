@@ -1,0 +1,54 @@
+/* LOGO CSS */
+
+.Logo {
+    width: 100%;
+}
+
+/* SEARCH BOX CSS */
+
+.SearchBox {
+    display: flex;
+    align-items: center;
+    max-width: 640px;
+    height: 40px;
+    padding: 0 16px;
+    margin: 32px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.SearchInput {
+    width: 600px;
+    margin: 0 8px;
+    font-size: 16px;
+    line-height: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.SearchInput::placeholder {
+    color: #999999;
+}
+
+.SearchIcon {
+    opacity: 0.8;
+    margin: 0 8px;
+    color: #0072a3;
+}
+
+.SearchIcon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* BOTTOM BUTTONS CSS */
+
+.CircleButton {
+    width: 48px;
+    height: 48px;
+    background-color: #29abe2;
+    opacity: 0.6;
+    
+}
