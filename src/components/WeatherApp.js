@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 
 const WeatherApp = () => {
     return (
-        <div>
+        <div className="WeatherApp">
             
         </div>
-    );
+    )
 };
 
 export default WeatherApp;

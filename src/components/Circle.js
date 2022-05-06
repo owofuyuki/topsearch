@@ -8,7 +8,7 @@ const Circle = (props) => {
             </div>
             <p className="ButtonTitle">{props.title}</p>
         </div>
-    );
+    ); 
 };
 
 export default Circle;

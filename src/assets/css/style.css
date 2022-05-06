@@ -132,6 +132,8 @@
     align-items: center;
 }
 
+/* NEWS CSS */
+
 /* FOOTER CSS */
 
 .Footer {
@@ -231,8 +233,8 @@
     .Footer {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        justify-content: flex-end;
+        align-items: flex-end;
         width: 100%;
         height: 128px;
         background-color: #87cefa;
