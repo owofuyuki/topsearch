@@ -10,6 +10,7 @@ function Main() {
       <TopButtons />
       <Content />
       <Footer />
+      <WeatherApp />
     </div>
   );
 }

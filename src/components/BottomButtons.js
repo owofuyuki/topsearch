@@ -3,6 +3,7 @@ import Circle from "./Circle.js";
 
 const BottomButtons = () => {
     const [show, setShow] = useState(false);
+    
     const handleFilter = () => {
         console.log(show);
         if (show) document.querySelector(".AdvancedFilter").style.display = "none";

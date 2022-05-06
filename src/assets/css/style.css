@@ -322,3 +322,52 @@
         background-color: #87cefa;
     }
 }
+
+/* WEATHER APP CSS */
+
+.WeatherApp {
+    position: absolute;
+    top: 120px;
+    left: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: flex-start;
+    width: 160px;
+    height: 80px;
+    background-image: linear-gradient(to top, #195e96, #86c4db, #c9f8ff);
+    border-radius: 8px;
+}
+
+.WeatherWrapped {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0 16px;
+}
+
+.Tempetature {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 22px;
+    margin: 0;
+}
+
+.WeatherIcon {
+    width: 48px;
+    height: 48px;
+}
+
+.Location {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.WeatherStatus {
+    margin: 0;
+    font-size: 12px;
+    color: #ffffff;
+}
