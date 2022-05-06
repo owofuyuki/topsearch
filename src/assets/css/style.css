@@ -51,6 +51,7 @@
 /* LOGO CSS */
 
 .Logo {
+    cursor: pointer;
     width: 100%;
 }
 
@@ -206,11 +207,11 @@
 .ModeSlide::before {
 	content: "";
 	position: absolute;
-	top: 4px;
-	right: 4px;
+	top: 6px;
+	right: 6px;
 	background-color: #87cefa;
-	width: 32px;
-	height: 32px;
+	width: 28px;
+	height: 28px;
 	border-radius: 50%;
 	transition: 0.5s;
 	cursor: pointer;
