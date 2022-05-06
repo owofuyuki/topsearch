@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const CalendarApp = () => {
     return (
-        <div>
+        <div className="CalendarApp">
             
         </div>
     );
