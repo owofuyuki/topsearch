@@ -1,9 +1,10 @@
-import './assets/css/Main.css';
+import './Main.css';
+import Content from './components/Content.js';
 
 function Main() {
   return (
-    <div className="Main">
-      
+    <div className="center Main">
+      <Content />
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-const Circle = () => {
+const Circle = (props) => {
     return (
-        <div>
-
+        <div className="CircleButton">
+            <i className={props.index} />
         </div>
     );
 };
