@@ -4,3 +4,10 @@
     justify-content: center;
     align-items: center;
 }
+
+.separation {
+    width: 2px;
+    height: 32px;
+    background-color: #ffffff;
+    margin: 0 0 0 8px;
+}

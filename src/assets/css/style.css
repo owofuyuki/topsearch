@@ -1,3 +1,53 @@
+/* TOP BUTTONS CSS */
+
+.TopButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+}
+
+.TopButton, .TopIcon {
+    margin: 40px 16px 0;
+}
+
+.TopIcon {
+    margin-right: 40px;
+    font-size: 28px;
+}
+
+.TopButton {
+    font-size: 20px;
+    font-weight: 500;
+    color: #29abe2;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    transition: all linear 0.2s;
+}
+
+.button {
+    padding: 8px 32px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #29abe2;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+}
+
+
+.TopButton:hover, .TopIcon:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.button:hover {
+    box-shadow: 0 4px 16px 0 rgb(0 0 0 / 16%);
+}
+
 /* LOGO CSS */
 
 .Logo {
@@ -12,7 +62,7 @@
     max-width: 640px;
     height: 40px;
     padding: 0 16px;
-    margin: 32px;
+    margin: 40px;
     background-color: #ffffff;
     border: 1px solid #000000;
     border-radius: 20px;
@@ -35,7 +85,7 @@
 .SearchIcon {
     opacity: 0.8;
     margin: 0 8px;
-    color: #0072a3;
+    color: #015f87;
 }
 
 .SearchIcon:hover {
@@ -48,7 +98,71 @@
 .CircleButton {
     width: 48px;
     height: 48px;
-    background-color: #29abe2;
-    opacity: 0.6;
-    
+    margin: 8px 64px 0;
+    border-radius: 24px;
+    background-color: rgba(41, 171, 226, 0.6);
+    transition: all linear 0.16s;
+}
+
+.CircleIcon {
+    font-size: 24px;
+    transition: all linear 0.16s;
+}
+
+.CircleButton:hover {
+    cursor: pointer;
+    background-color: rgb(41, 171, 226);
+    box-shadow: 0 4px 16px 0 rgb(0 0 0 / 16%);
+}
+
+.CircleButton:hover .CircleIcon {
+    font-size: 28px;
+}
+
+.ButtonTitle {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.BottomButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FOOTER CSS */
+
+.Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    background-color: #87cefa;
+}
+
+.LanguageSwitch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.LanguageTitle {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.Language {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.LanguageIcon {
+    width: 100%;
+    height: 100%;
+    margin: 8px;
 }

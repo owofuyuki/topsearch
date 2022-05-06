@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const ModeSwitch = () => {
     return (
-        <div>
+        <div className="ModeSwitch">
             
         </div>
     );
