@@ -332,7 +332,8 @@
     display: flex;
     justify-content: space-evenly;
     align-self: flex-start;
-    width: 160px;
+    padding-right: 10px;
+    width: 150px;
     height: 80px;
     background-image: linear-gradient(to top, #195e96, #86c4db, #c9f8ff);
     border-radius: 8px;
@@ -355,8 +356,9 @@
 }
 
 .WeatherIcon {
-    width: 48px;
-    height: 48px;
+    margin-top: 8px;
+    width: 40px;
+    height: 40px;
 }
 
 .Location {

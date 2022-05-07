@@ -9,36 +9,45 @@ const WeatherApp = () => {
     const [weather, setWeather] = useState();
 
     const getUserLocation = async () => {
-        const response = await fetch("https://ipinfo.io/json?token=2424c1b3a0f35a");
+        const response = await fetch("https://ipinfo.io/json?token=b6a2f5c07da522");
         const data = await response.json();
         setLocation(data.city);
     };
 
-    const getWeather = async () => {
+    useEffect(() => {
         getUserLocation();
+    }, []);
+
+    console.log(location);
+
+    const getWeather = async () => {
+        console.log(`${BASE_URL}/current.json?key=${API_KEY}&q=${location}`);
         const response = await axios.get(`${BASE_URL}/current.json?key=${API_KEY}&q=${location}`);
-        setWeather(response.data);
-        console.log(response.data);
+        setWeather(response?.data);
     };
 
-    getWeather();
+    useEffect(() => {
+        getWeather();
+    }, []);
+
+    console.log(weather);
 
     return (
         <div className="WeatherApp">
             <div className="WeatherWrapped">
-                <h1 className="Tempetature">{weather.current.temp_c}°C</h1>
+                <h1 className="Tempetature">{weather?.current?.temp_c}°C</h1>
                 <div>
                     <p className="Location">{location}</p>
-                    <p className="WeatherStatus">{weather.current.condition.text}</p>
+                    <p className="WeatherStatus">{weather?.current?.condition?.text}</p>
                 </div>
             </div>
-            <img className="WeatherIcon" src={weather.current.condition.icon} alt="Icon" />
+            <img className="WeatherIcon" src={weather?.current?.condition?.icon} alt="Icon" />
         </div>
     )
 };
 
-// weather.current.temp_c
-// src={weather.current.condition.icon}
-// weather.current.condition.text
+// weather?.current?.temp_c
+// src={weather?.current?.condition?.icon}
+// weather?.current?.condition?.text
 
 export default WeatherApp;
