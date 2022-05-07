@@ -4,6 +4,7 @@ import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import MyContext from './MyContext.js';
 import { useContext } from 'react';
+import { useBoolean } from '@chakra-ui/react';
 
 const SearchBox = (props) => {
     const [input, setInput] = useState("");
@@ -60,18 +61,20 @@ const SearchBox = (props) => {
     };
 
     const myCtx = useContext(MyContext);
-    const [toggle, setToggle] = useState(true);
+    const [toggle, setToggle] = useBoolean();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const defaultURL = myCtx.searchWeb;
+        let defaultURL = myCtx.searchWeb
     
         if (defaultURL !== '') {
             defaultURL += input;
             window.open(defaultURL);
         } 
         else {
-            const defaultURL = `https://google.com/search?q=${toggle ? `"${input}"` : input}`;
+            let defaultURL = `https://google.com/search?q=${
+                toggle ? `"${input}"` : input
+            }`;
             if (myCtx.list.length > 0) {
                 myCtx.list.forEach((link, i) => {
                     defaultURL += `${i > 0 ? ' OR+' : ''} site%3A${link}`;

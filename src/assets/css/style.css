@@ -205,12 +205,12 @@
     align-items: center;
     padding: 16px;
     margin: 16px 0 32px;
-    width: 1000px;
+    width: 640px;
     background-color: #ffffff;
     border-radius: 8px;
     --zoom-from: 0;
     --zoom-to: 1;
-    transform-origin: calc(316px) top;
+    transform-origin: calc(132px) top;
     animation: zoomIn ease-in 0.4s;
     will-change: opacity, transform;
 }
@@ -221,7 +221,7 @@
     border-style: solid;
     border-color: transparent transparent #ffffff transparent;
     position: absolute;
-    left: 316px;
+    left: 132px;
     top: -40px;
 }
 
