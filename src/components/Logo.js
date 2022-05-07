@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import logoImg from "../assets/images/logo-light.png"
+import logoLight from "../assets/images/logo-light.png";
+import logoDark from "../assets/images/logo-dark.png";
 
-const Logo = () => {
+const Logo = (props) => {
     return (
         <div className="center Logo">
-            <img src={logoImg} alt="topSearch" />
+            <img src={props.theme === "light" ? logoLight : logoDark} alt="topSearch" />
         </div>
     );
 };

@@ -3,18 +3,13 @@ import Language from "./Language.js";
 import englishIcon from "../assets/images/english-icon.png";
 import vietnameseIcon from "../assets/images/vietnamese-icon.png";
 
-const LanguageSwitch = () => {
-    const [currentLanguage, setCurrentLaguage] = useState(true);
-    const handleLanguageSwitch = () => {
-
-    };
-
+const LanguageSwitch = (props) => {
     return (
         <div className="LanguageSwitch">
-            <p className="LanguageTitle">Language : </p>
-            <Language index={englishIcon} title="English" />
+            <p className="LanguageTitle">{props.language === "english" ? "Language : " : "Ngôn ngữ : "}</p>
+            <Language onClick={props.onClick1} index={englishIcon} title={props.language === "english" ? "English" : "Tiếng Anh"} />
             <span className="separation"></span>
-            <Language index={vietnameseIcon} title="Vietnamese" />
+            <Language onClick={props.onClick2} index={vietnameseIcon} title={props.language === "english" ? "Vietnamese" : "Tiếng Việt"} />
         </div>
     );
 };

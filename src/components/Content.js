@@ -6,12 +6,12 @@ import AdvancedFilter from "./AdvancedFilter.js";
 // import History from "./History.js";
 // import News from "./News.js";
  
-const Content = () => {
+const Content = (props) => {
     return (
         <div className="center Content">
-            <Logo />
-            <SearchBox />
-            <BottomButtons />
+            <Logo theme={props.theme} />
+            <SearchBox language={props.language} />
+            <BottomButtons language={props.language} />
             <AdvancedFilter />
             {/* <History /> */}
             {/* <News /> */}

@@ -3,7 +3,7 @@ import { useSpeechRecognition } from "react-speech-kit";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 
-const SearchBox = () => {
+const SearchBox = (props) => {
     const [input, setInput] = useState("");
     const [layout, setLayout] = useState("default");
     const keyboard = useRef();
@@ -63,7 +63,7 @@ const SearchBox = () => {
             <input 
                 type="text"
                 className="SearchInput"
-                placeholder="What are you looking for?"
+                placeholder={props.language === "english" ? "What are you looking for?" : "Nhập nội dung cần tìm kiếm"}
                 ref={searchInput}
                 value={input}
                 onChange={onChangeInput}

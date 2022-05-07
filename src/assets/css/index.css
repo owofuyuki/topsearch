@@ -1,3 +1,11 @@
+#light {
+    background-color: #f0f8ff;
+}
+
+#dark {
+    background-color: #202124;
+}
+
 .center {
     display: flex;
     flex-direction: column;
@@ -8,8 +16,15 @@
 .separation {
     width: 2px;
     height: 32px;
-    background-color: #ffffff;
     margin: 0 0 0 8px;
+}
+
+#light .separation {
+    background-color: #ffffff;
+}
+
+#dark .separation {
+    background-color: #000000;
 }
 
 .flex {

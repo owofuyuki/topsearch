@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Circle from "./Circle.js";
 
-const BottomButtons = () => {
+const BottomButtons = (props) => {
     const [show, setShow] = useState(false);
     
     const handleFilter = () => {
@@ -13,9 +13,9 @@ const BottomButtons = () => {
 
     return (
         <div className="BottomButtons">
-            <Circle onClick={handleFilter} index="fa-solid fa-plus" title="Advanced" />
-            <Circle index="fa-solid fa-clock-rotate-left" title="History" />
-            <Circle index="fa-solid fa-newspaper" title="News" />
+            <Circle onClick={handleFilter} index="fa-solid fa-plus" title={props.language === "english" ? "Advanced" : "Nâng cao"} />
+            <Circle index="fa-solid fa-clock-rotate-left" title={props.language === "english" ? "History" : "Lịch sử"} />
+            <Circle index="fa-solid fa-newspaper" title={props.language === "english" ? "News" : "Tin tức"} />
         </div>
     );
 };

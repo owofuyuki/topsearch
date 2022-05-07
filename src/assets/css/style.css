@@ -14,12 +14,20 @@
 .TopIcon {
     margin-right: 40px;
     font-size: 28px;
+    transition: all linear 0.32s;
+}
+
+#light .TopIcon {
+    color: #000000;
+}
+
+#dark .TopIcon {
+    color: #f0f8ff;
 }
 
 .TopButton {
     font-size: 20px;
     font-weight: 500;
-    color: #29abe2;
     background-color: transparent;
     outline: none;
     border: none;
@@ -27,17 +35,31 @@
     transition: all linear 0.2s;
 }
 
+#light .TopButton {
+    color: #29abe2;
+}
+
+#dark .TopButton {
+    color: #ffffff;
+}
+
 .button {
     padding: 8px 32px;
     font-size: 20px;
     font-weight: 500;
-    color: #ffffff;
     background-color: #29abe2;
     outline: none;
     border: none;
     border-radius: 6px;
 }
 
+#light .button {
+    color: #ffffff;
+}
+
+#dark .button {
+    color: #000000;
+}
 
 .TopButton:hover, .TopIcon:hover {
     cursor: pointer;
@@ -66,9 +88,17 @@
     height: 40px;
     padding: 0 16px;
     margin: 40px;
+    border-radius: 20px;
+}
+
+#light .SearchBox {
     background-color: #ffffff;
     border: 1px solid #000000;
-    border-radius: 20px;
+}
+
+#dark .SearchBox {
+    background-color: #4d4d4d;
+    border: 1px solid #f2f2f2;
 }
 
 .SearchInput {
@@ -81,14 +111,25 @@
     background-color: transparent;
 }
 
-.SearchInput::placeholder {
+#light .SearchInput::placeholder {
     color: #999999;
+}
+
+#dark .SearchInput::placeholder {
+    color: #ffffff;
 }
 
 .SearchIcon {
     opacity: 0.8;
     margin: 0 8px;
+}
+
+#light .SearchIcon {
     color: #015f87;
+}
+
+#dark .SearchIcon {
+    color: #f0f8ff;
 }
 
 .SearchIcon:hover {
@@ -109,13 +150,21 @@
     height: 48px;
     margin: 8px 64px 0;
     border-radius: 24px;
-    background-color: rgba(41, 171, 226, 0.6);
+    background-color: #29abe299;
     transition: all linear 0.16s;
 }
 
 .CircleIcon {
     font-size: 24px;
     transition: all linear 0.16s;
+}
+
+#light .CircleIcon {
+    color: #000000;
+}
+
+#dark .CircleIcon {
+    color: #f0f8ff;
 }
 
 .CircleButton:hover {
@@ -131,6 +180,14 @@
 .ButtonTitle {
     font-size: 16px;
     font-style: italic;
+}
+
+#light .ButtonTitle {
+    color: #000000;
+}
+
+#dark .ButtonTitle {
+    color: #f0f8ff;
 }
 
 .BottomButtons {
@@ -230,7 +287,14 @@
     align-items: center;
     width: 100%;
     height: 64px;
+}
+
+#light .Footer {
     background-color: #87cefa;
+}
+
+#dark .Footer {
+    background-color: #f0f8ff;
 }
 
 .LanguageSwitch {
@@ -242,7 +306,6 @@
 
 .LanguageTitle {
     font-size: 20px;
-    color: #ffffff;
     font-weight: 700;
 }
 
@@ -254,7 +317,6 @@
 }
 
 .LanguageIcon {
-    width: 100%;
     height: 100%;
     margin: 8px;
 }
@@ -262,8 +324,15 @@
 .FooterCopyright {
     margin-right: 40px;
     font-size: 20px;
-    color: #ffffff;
     font-weight: 700;
+}
+
+#light .LanguageTitle, #light .FooterCopyright {
+    color: #ffffff;
+}
+
+#dark .LanguageTitle, #dark .FooterCopyright {
+    color: #000000;
 }
 
 @media (max-width: 740px) {
