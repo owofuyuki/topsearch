@@ -373,3 +373,53 @@
     font-size: 12px;
     color: #ffffff;
 }
+
+/* CALENDAR APP CSS */
+
+.CalendarApp {
+    position: absolute;
+    top: 220px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    padding-left: 10px;
+    width: 150px;
+    height: 80px;
+    background-image: linear-gradient(to top, #c2c2c2, #e0e0e0, #ffffff);
+    border-radius: 8px;
+}
+
+.CalendarApp::before {
+    content: "";
+	position: absolute;
+	top: 0;
+	right: 12px;
+	background-color: #af0000;
+	width: 12px;
+	height: 40px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.CalendarYear {
+    margin: 0 0 0 16px;
+    font-size: 12px;
+}
+
+.CalendarDate {
+    margin: 0 0 0 16px;
+    font-size: 24px;
+}
+
+.CalendarDetail {
+    margin: 6px 0 0 4px;
+    width: 120px;
+    height: 12px;
+    font-size: 12px;
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
