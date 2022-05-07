@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/topsearch/static/css/main.79393ff9.css",
+    "main.js": "/topsearch/static/js/main.2349c190.js",
+    "static/media/GoogleSans-Italic.ttf": "/topsearch/static/media/GoogleSans-Italic.e828b947af1a6400ff17.ttf",
+    "static/media/GoogleSans-BoldItalic.ttf": "/topsearch/static/media/GoogleSans-BoldItalic.e17ca4690ef3bde42880.ttf",
+    "static/media/GoogleSans-Regular.ttf": "/topsearch/static/media/GoogleSans-Regular.4b411db491ad6ae789b8.ttf",
+    "static/media/GoogleSans-MediumItalic.ttf": "/topsearch/static/media/GoogleSans-MediumItalic.e5febd9c0f8b8a1887a9.ttf",
+    "static/media/GoogleSans-Medium.ttf": "/topsearch/static/media/GoogleSans-Medium.de70471b71019e95638e.ttf",
+    "static/media/GoogleSans-Bold.ttf": "/topsearch/static/media/GoogleSans-Bold.6b36bf67d979283ff19f.ttf",
+    "index.html": "/topsearch/index.html",
+    "main.79393ff9.css.map": "/topsearch/static/css/main.79393ff9.css.map",
+    "main.2349c190.js.map": "/topsearch/static/js/main.2349c190.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79393ff9.css",
+    "static/js/main.2349c190.js"
+  ]
+}
