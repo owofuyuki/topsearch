@@ -8,4 +8,5 @@
     background-color: #f0f8ff;
     font-family: 'Google Sans', sans-serif;
     scroll-behavior: smooth;
+    overflow: hidden;
 }

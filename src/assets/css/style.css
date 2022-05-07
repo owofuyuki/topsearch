@@ -96,6 +96,12 @@
     cursor: pointer;
 }
 
+@media (max-width: 740px) {
+    .SearchBox {
+        width: 400px;
+    }
+}
+
 /* BOTTOM BUTTONS CSS */
 
 .CircleButton {
@@ -422,4 +428,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+@media (max-width: 740px) {
+    .WeatherApp, .CalendarApp {
+        display: none;
+    }
 }
