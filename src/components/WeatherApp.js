@@ -28,7 +28,7 @@ const WeatherApp = () => {
 
     useEffect(() => {
         getWeather();
-    }, []);
+    }, [location]);
 
     console.log(weather);
 

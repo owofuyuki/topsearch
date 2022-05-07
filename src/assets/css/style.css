@@ -259,73 +259,26 @@
     margin: 8px;
 }
 
-.ModeSwitch {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 40px;
-}
-
-.ModeTitle {
+.FooterCopyright {
+    margin-right: 40px;
     font-size: 20px;
     color: #ffffff;
     font-weight: 700;
-}
-
-.ModeSlideContainer {
-	width: 80px;
-	height: 40px;
-	margin-left: 12px;
-}
-
-.ModeCheckbox {
-	visibility: none;
-	display: none;
-}
-
-.ModeSlide {
-	position: relative;
-	display: block;
-	width: 80px;
-	height: 40px;
-	cursor: pointer;
-	border-radius: 20px;
-	background-color: #f0f8ff;
-	overflow: hidden;
-	transition: ease-in 0.5s;
-}
-
-.ModeSlide::before {
-	content: "";
-	position: absolute;
-	top: 6px;
-	right: 6px;
-	background-color: #87cefa;
-	width: 28px;
-	height: 28px;
-	border-radius: 50%;
-	transition: 0.5s;
-	cursor: pointer;
-}
-
-.ModeCheckbox:checked ~ .ModeSlide {
-	background-color: #202124;
-}
-
-.ModeCheckbox:checked ~ .ModeSlide::before {
-	transform: translateX(-40px);
-	background-color: #f0f8ff;
 }
 
 @media (max-width: 740px) {
     .Footer {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        height: 128px;
+        height: 64px;
         background-color: #87cefa;
+    }
+
+    .FooterCopyright {
+        display: none;
     }
 }
 

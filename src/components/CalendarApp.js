@@ -28,7 +28,7 @@ const CalendarApp = () => {
 
     useEffect(() => {
         getCalendar();
-    }, []);
+    }, [location]);
 
     console.log(calendar);
 
