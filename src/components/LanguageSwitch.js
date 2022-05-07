@@ -7,9 +7,9 @@ const LanguageSwitch = (props) => {
     return (
         <div className="LanguageSwitch">
             <p className="LanguageTitle">{props.language === "english" ? "Language : " : "Ngôn ngữ : "}</p>
-            <Language onClick={props.onClick1} index={englishIcon} title={props.language === "english" ? "English" : "Tiếng Anh"} />
+            <Language focus={props.language === "english" ? "focus" : ""} onClick={props.onClick1} index={englishIcon} title={props.language === "english" ? "English" : "Tiếng Anh"} />
             <span className="separation"></span>
-            <Language onClick={props.onClick2} index={vietnameseIcon} title={props.language === "english" ? "Vietnamese" : "Tiếng Việt"} />
+            <Language focus={props.language === "vietnamese" ? "focus" : ""} onClick={props.onClick2} index={vietnameseIcon} title={props.language === "english" ? "Vietnamese" : "Tiếng Việt"} />
         </div>
     );
 };
