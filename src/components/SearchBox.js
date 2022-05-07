@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { useSpeechRecognition } from "react-speech-kit";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
+import MyContext from './MyContext.js';
+import { useContext } from 'react';
 
 const SearchBox = (props) => {
     const [input, setInput] = useState("");
@@ -57,9 +59,36 @@ const SearchBox = (props) => {
         setShow(!show);
     };
 
+    const myCtx = useContext(MyContext);
+    const [toggle, setToggle] = useState(true);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const defaultURL = myCtx.searchWeb;
+    
+        if (defaultURL !== '') {
+            defaultURL += input;
+            window.open(defaultURL);
+        } 
+        else {
+            const defaultURL = `https://google.com/search?q=${toggle ? `"${input}"` : input}`;
+            if (myCtx.list.length > 0) {
+                myCtx.list.forEach((link, i) => {
+                    defaultURL += `${i > 0 ? ' OR+' : ''} site%3A${link}`;
+                });
+                window.open(defaultURL);
+            } 
+            else {
+                window.open(defaultURL);
+            };
+        };
+        setInput("");
+      };
+
     return (
-        <div className="SearchBox">
+        <form className="SearchBox" onSubmit={handleSubmit}>
             <i onClick={() => {searchInput.current.focus()}} className="fa-duotone fa-magnifying-glass SearchIcon SearchIcon-MG" />
+            <form></form>
             <input 
                 type="text"
                 className="SearchInput"
@@ -76,7 +105,7 @@ const SearchBox = (props) => {
                 onChange={onChange}
                 onKeyPress={onKeyPress}
             />
-        </div>
+        </form>
     );
 };
 

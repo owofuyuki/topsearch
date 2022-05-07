@@ -17,13 +17,8 @@ function Main() {
     setTheme((cur) => (cur === "light" ? "dark" : "light"));
   };
 
-  const setEnglish = () => {
-    setLanguage("english");
-  };
-
-  const setVietnamese = () => {
-    setLanguage("vietnamese");
-  };
+  const setEnglish = () => {setLanguage("english");};
+  const setVietnamese = () => {setLanguage("vietnamese");};
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
